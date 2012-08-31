@@ -1,0 +1,11 @@
+%h1 転職する前にためそう！
+.description 社会人のための職業体験・インターンシップが探せます
+.eye_catch
+  = image_tag 'http://www.shigoto-ryokou.com/images/main-title06.jpg', width: '800'
+%h2 体験できる企業
+#experience
+  - @experiences.each do |experience|
+    .experience
+      .title= link_to experience.title, experience
+      .photo= image_tag 'http://www.shigoto-ryokou.com/tmp_img/m_jobs_pic01_20120726191614.jpg', size: '200x132'
+      .description= experience.description

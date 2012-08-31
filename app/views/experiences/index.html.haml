@@ -1,0 +1,21 @@
+%h1 Listing experiences
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th
+    %th
+    %th
+
+  - @experiences.each do |experience|
+    %tr
+      %td= experience.title
+      %td= experience.description
+      %td= link_to 'Show', experience
+      %td= link_to 'Edit', edit_experience_path(experience)
+      %td= link_to 'Destroy', experience, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Experience', new_experience_path

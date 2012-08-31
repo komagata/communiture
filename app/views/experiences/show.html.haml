@@ -1,0 +1,17 @@
+%h1= @experience.title
+%content
+  .photo
+    %img(src="http://www.shigoto-ryokou.com/tmp_img/m_jobs_pic01_20120726191614.jpg")
+  = @experience.description
+%aside
+  .register= link_to '応募する', ''
+  .price
+    28,000円
+  .date
+    .label 期間：
+    %p 一ヶ月〜
+  .locate 
+    .label 場所：
+    %p 渋谷区本町
+  .requirements 花屋になりたい方 
+%br(style="clear:both")/

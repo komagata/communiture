@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title Communiture
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header
+      %h1#logo= link_to 'Communiture', root_path
+    %nav
+      %ul
+        %li= link_to '募集する', '/offer'
+    #wrapper
+      = yield
+    #footer
+      .support
+        %h3 サポート
+        %ul
+          %li= link_to '応募までの流れ', '/help/how_to_register' 
+          %li= link_to 'よくある質問', '/faq' 
+          %li= link_to '募集のまでの流れ', '/help/how_to_offer' 
+          %li= link_to '料金体系', '/pricing' 
+      .about_communiture
+        %h3 Communitureについて
+        %ul
+          %li= link_to '開発チーム', '' 
+          %li= link_to 'Facebook', '' 
+          %li= link_to 'Twitter', '' 
+          %li= link_to 'ブログ', '' 
+
